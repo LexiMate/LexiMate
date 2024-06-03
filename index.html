@@ -75,37 +75,9 @@
                     <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
                     <div class="divider-custom-line"></div>
                 </div>
-                <div class="row justify-content-center">
-                    <div class="col-lg-8 col-xl-7">
-                        <form id="contactForm" data-sb-form-api-token="API_TOKEN">
-                            <div class="mb-3">
-                                <label for="exampleInputName1" class="form-label">Nombre completo</label>
-                                <input type="name" class="form-control" id="exampleInputName1" aria-describedby="nameHelp">
-                            </div>
-                            <div class="mb-3">
-                                <label for="exampleInputEmail1" class="form-label">Correo electrónico</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                                <div id="emailHelp" class="form-text">No compartiremos tu correo electónico con terceros.</div>
-                            </div>
-                            <div class="mb-3">
-                                <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-                                <input type="password" class="form-control" id="exampleInputPassword1">
-                            </div>
-                            <div class="mb-3">
-                                <label for="exampleInputPassword1" class="form-label">Repetir contraseña</label>
-                                <input type="password" class="form-control" id="exampleInputPassword1">
-                            </div>
-                            <div class="d-none" id="submitSuccessMessage">
-                                <div class="text-center mb-3">
-                                    <div class="fw-bolder">Form submission successful!</div>
-                                    To activate this form, sign up at
-                                    <br />
-                                </div>
-                            </div>
-                            <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
-                            <button class="btn btn-primary btn-xl disabled" id="submitButton" type="submit">Enviar</button>
-                        </form>
-                    </div>
+                <div class="d-flex flex-column align-items-center">
+                    <a href="/Componentes/register.html" class="btn btn-primary btn-xl mb-2" id="submitButton" type="submit">REGISTRARME</a>
+                    <a  href="/Componentes/iniciarSesion.html" class="btn btn-light btn-xl" id="submitButton" type="submit">Iniciar Sesión</a>      
                 </div>
             </div>
         </section>
@@ -133,7 +105,6 @@
         </footer>
         
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="js/scripts.js"></script>
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
     </body>
 </html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Web</title>
+    <link rel="stylesheet" href="/CSS/chat.css">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="sidebar">
+            <div class="search-bar">
+                <input type="text" placeholder="Search messages or users">
+            </div>
+            <div class="contacts">
+                <h2>Chats</h2>
+                <div class="recent">
+                    <h3>Recent</h3>
+                    <ul id="contacts">
+                        <li onclick="openChat('Patrick Hendricks')">Patrick Hendricks</li>
+                        <li onclick="openChat('Mark Messer')">Mark Messer</li>
+                        <li onclick="openChat('General')">General</li>
+                        <li onclick="openChat('Doris Brown')">Doris Brown</li>
+                        <li onclick="openChat('Designer')">Designer</li>
+                        <li onclick="openChat('Steve Walker')">Steve Walker</li>
+                        <li onclick="openChat('Albert Rodarte')">Albert Rodarte</li>
+                        <li onclick="openChat('Mirta George')">Mirta George</li>
+                        <li onclick="openChat('Paul Haynes')">Paul Haynes</li>
+                        <!-- Agregar más contactos según sea necesario -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="chat-box">
+            <div class="chat-header">
+                <h3 id="chat-with">Chat con: </h3>
+            </div>
+            <div class="chat-messages" id="chat-messages">
+                <!-- Mensajes del chat aparecerán aquí -->
+            </div>
+            <div class="chat-input">
+                <input type="text" id="message-input" placeholder="Enter message...">
+                <button id="send-button">Enviar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/chat.js"></script>
+</body>
+</html>

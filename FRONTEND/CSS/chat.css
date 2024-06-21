@@ -42,8 +42,8 @@ body {
 
 .contacts h2 {
     padding: 10px;
-    background-color: #007bff;
-    color: white;
+    background-color: #eeec67;
+    color: black;
     margin: 0;
 }
 
@@ -79,8 +79,8 @@ body {
 
 .chat-header {
     padding: 15px;
-    background-color: #007bff;
-    color: white;
+    background-color: #eeec67;
+    color: black;
 }
 
 .chat-messages {

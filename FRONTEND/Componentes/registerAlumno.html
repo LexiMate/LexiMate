@@ -137,11 +137,11 @@
                 </div>
 
                 <div class="row">
-                  <div class="col-md-6 mb-4 d-flex align-items-center">
+                  <div class="col-md-6 mb-4 pb-2">
 
-                    <div data-mdb-input-init class="form-outline datepicker w-100">
-                      <input type="date" class="form-control form-control-lg" id="birthdayDate" />
-                      <label for="birthdayDate" class="form-label">Fecha de nacimiento</label>
+                    <div data-mdb-input-init class="form-outline">
+                      <input type="email" id="emailAddress" class="form-control form-control-lg" />
+                      <label class="form-label" for="emailAddress">Correo electrónico</label>
                     </div>
 
                   </div>
@@ -174,23 +174,21 @@
                   <div class="col-md-6 mb-4 pb-2">
 
                     <div data-mdb-input-init class="form-outline">
-                      <input type="email" id="emailAddress" class="form-control form-control-lg" />
-                      <label class="form-label" for="emailAddress">Correo electrónico</label>
+                      <input type="password" id="pwd" class="form-control form-control-lg" />
+                      <label class="form-label" for="password">Contraseña</label>
                     </div>
 
                   </div>
                   <div class="col-md-6 mb-4 pb-2">
 
                     <div data-mdb-input-init class="form-outline">
-                      <input type="tel" id="phoneNumber" class="form-control form-control-lg" />
-                      <label class="form-label" for="phoneNumber">Teléfono</label>
+                      <input type="password" id="pwdConfirm" class="form-control form-control-lg" />
+                      <label class="form-label" for="password">Repetir Contraseña</label>
                     </div>
 
                   </div>
                 </div>
-                <a href="#myModal" class="trigger-btn" data-toggle="modal">
-                  <button type="button" class="btn btn-primary">Aceptar</button>
-                </a>
+                  <button onclick="event.preventDefault(); register();" type="button" class="btn btn-primary">Aceptar</button>
               </form>
             </div>
           </div>
@@ -212,13 +210,14 @@
           <p class="text-center">Te hemos enviado un correo para confirmar tu email.</p>
         </div>
         <div class="modal-footer">
-          <button class="btn btn-success btn-block" data-dismiss="modal">OK</button>
+          <button id="btnBack" onclick="event.preventDefault(); btnBack();" class="btn btn-success btn-block" data-dismiss="modal">OK</button>
         </div>
       </div>
     </div>
   </div>
   <!-- Bootstrap JS CDN -->
   <script>"https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"</script>
+  <script src="/FRONTEND/js/register.js"></script>
 </body>
 
 </html>

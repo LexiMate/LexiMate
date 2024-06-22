@@ -11,21 +11,22 @@
 </head>
 <!--Coded with love by Mutiullah Samim-->
 <body style="background-color: #fffd97;">
+    <ul id="nav-item"></ul>
 	<div class="wrapper">
         <div class="logo">
             <img class="bg-dark" src="/FRONTEND/assets/logo-leximate.png" alt="">
         </div>
         <br>
-        <form class="p-3 mt-3">
+        <form class="p-3 mt-3" id="form">
             <div class="form-field d-flex align-items-center">
                 <span class="far fa-user"></span>
-                <input type="text" name="userName" id="userName" placeholder="Usuario o Correo">
+                <input type="text" name="userEmail" id="userEmail" placeholder="Correo">
             </div>
             <div class="form-field d-flex align-items-center">
                 <span class="fas fa-key"></span>
                 <input type="password" name="password" id="pwd" placeholder="Contraseña">
             </div>
-            <button class="btn mt-3" onclick="event.preventDefault(); log()">Ingresar</button>
+            <button class="btn mt-3" type="submit">Ingresar</button>
         </form>
         <div class="text-center fs-6 d-flex flex-column align-items-center">
             <a href="#">¿Olvidaste tu contraseña?</a>

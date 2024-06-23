@@ -1,29 +1,17 @@
-// function log(){
-
-//     let user = document.getElementById("userName").value;
-//     let pass = document.getElementById("pwd").value;
-
-//     if(user=='Juan' && pass=='1234'){
-//         window.location.href = '/FRONTEND/Componentes/home.html'
-//     }else{
-//         alert('error')
-//     }
-// }
-
 const form = document.getElementById('form');
 
 const login = async (e) => {
     e.preventDefault();
 
-    const emailUsuario = document.getElementById('userEmail').value; // Obtén el valor del campo de correo electrónico
-    const contrasenia = document.getElementById('pwd').value; // Obtén el valor del campo de contraseña
+    const emailUsuario = document.getElementById('userEmail').value;
+    const contrasenia = document.getElementById('pwd').value;
 
-    const datosUsuario = { Email: emailUsuario, Contrasenia: contrasenia }; // Construye el objeto con los datos del usuario
+    const datosUsuario = { Email: emailUsuario, Contrasenia: contrasenia };
 
     try {
         const peticion = await fetch('http://localhost:3000/login', {
             method: "POST",
-            body: JSON.stringify(datosUsuario), // Convierte el objeto datosUsuario a JSON
+            body: JSON.stringify(datosUsuario),
             headers: {
                 'Content-Type': 'application/json'
             }
@@ -32,9 +20,8 @@ const login = async (e) => {
         const respuesta = await peticion.json();
 
         if (!peticion.ok) {
-            alert(respuesta.msg);
+            $('#myModal').modal('show'); // Mostrar modal de error
         } else {
-            alert(respuesta.msg);
             localStorage.setItem('token', respuesta.token);
             window.location.href = '/FRONTEND/Componentes/home.html';
         }

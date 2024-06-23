@@ -44,15 +44,17 @@ const register = async (e) => {
         }
     });
 
-    const respuesta = await peticion.json();
-
-    if (!peticion.ok) {
-        alert(respuesta.msg);
+    if (peticion.ok) {
+        $('#myModal').modal('show');
     } else {
+        const respuesta = await peticion.json();
         alert(respuesta.msg);
-        window.location.href = '/FRONTEND/Componentes/iniciarSesion.html';
     }
 };
 
 const form = document.getElementById('form');
 form.addEventListener('submit', register);
+
+function btnBack() {
+    window.location.href = '/FRONTEND/Componentes/iniciarSesion.html'; // Ruta a donde quieras redirigir después de cerrar el modal
+}

@@ -84,6 +84,21 @@ main {
   right: 0;
 }
 
+#card-game{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#card-game img{
+  height: 100px;
+  width: 100px;
+}
+
+#card-container{
+  width: 200px;
+  margin: 1cm;
+}
 
 /* Asegura que no haya desbordamiento en dispositivos móviles */
 @media (max-width: 768px) {
